@@ -4,7 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/vPralese.unity
+    guid: 984635ba26f81a040bfe504598adb9c5
+  - enabled: 0
+    path: Assets/Scenes/Walk.unity
+    guid: 33b2fed772a2ed749871c310deed06dd
+  - enabled: 1
+    path: Assets/Scenes/VinesCutting.unity
+    guid: 0b11b155cf131fc43b24f7d44e115a1a
+  - enabled: 1
+    path: Assets/Scenes/sensorTest.unity
+    guid: 183c9193e6129f249a9d5e72bc893622
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 068113747ce021c499945db801ed3d9f,
       type: 2}

@@ -1,43 +1,45 @@
-using UnityEngine;
 using FMODUnity;
+using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+namespace Player_Scripts
 {
-    public float stepLength = .5f;
-	public EventReference stepsSound;
-	public EventReference goingBackNotice;
-	public string loadBank;
-	
-	void Start()
-    {
-        FMODUnity.RuntimeManager.LoadBank(loadBank);
-    }
+	public class PlayerMovement : MonoBehaviour
+	{
+		public float stepLength = .5f;
+		public EventReference stepsSound;
+		public EventReference goingBackNotice;
+		public string loadBank;
+		public GameObject walkingTo;
 
-    void Update(){
-        // check for tap on mobile
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            // get the direction the player is looking
-            Vector3 direction = Camera.main.transform.forward;
-            direction.y = 0;
-            direction.Normalize();
-			if (direction.z < -0.5)
-            {	
-				Debug.Log(direction.z);
-				FMODUnity.RuntimeManager.PlayOneShot(goingBackNotice, transform.position);
-                // Player is trying to move backwards, don't move
-                return;
-            }
+		private void Start() {
+			RuntimeManager.LoadBank(loadBank);
+		}
 
-			FMODUnity.RuntimeManager.PlayOneShot(stepsSound, transform.position);
+		private void Update() {
+			// check for tap on mobile
+			if (Input.touchCount <= 0 || Input.GetTouch(0).phase != TouchPhase.Began) return;
+			// get the direction the player is looking
+			Vector3 position = transform.position;
+			Vector3 direction = transform.forward;
+			position += direction * stepLength;
+			Vector3 goal = walkingTo.transform.position;
+			// Debug.Log("audio source: " + goal + '\n' + "before move: " + direction + '\n' + "after move: "+ position);
+			// Debug.Log(Vector3.Distance(position, goal));
+			// Debug.Log(Vector3.Distance(transform.position, goal));
+			if (Vector3.Distance(position, goal)>Vector3.Distance(transform.position, goal)) {
+				//don't move backwards
+				RuntimeManager.PlayOneShot(goingBackNotice, transform.position);
+				return;
+			}
+			//play step sound-handled by fmod
+			RuntimeManager.PlayOneShot(stepsSound, position);
 
-            // move the player in the direction they are looking
-            transform.position += direction * stepLength;
-        }
-    }
+			// move forward
+			transform.position = position;
+		}
 
-	void OnDestroy()
-    {
-        FMODUnity.RuntimeManager.UnloadBank(loadBank);
-    }
+		private void OnDestroy() {
+			RuntimeManager.UnloadBank(loadBank);
+		}
+	}
 }

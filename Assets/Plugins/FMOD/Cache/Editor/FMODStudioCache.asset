@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../Desktop/bc/test test/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638131279181183676
+  lastModified: 638143515231577501
   FileSizes:
   - Name: Desktop
-    Value: 1020
+    Value: 1058
   Exists: 1
 --- !u!114 &-4334275938173122906
 MonoBehaviour:
@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: ../Desktop/bc/test test/Build/Desktop/test.bank
   Name: test
   StudioPath: bank:/test
-  lastModified: 638131279182188536
+  lastModified: 638143515232512864
   FileSizes:
   - Name: Desktop
     Value: 22432
@@ -65,8 +65,35 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 27
   Length: 5000
+--- !u!114 &-3181890195944718924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VineCut
+  m_EditorClassIdentifier: 
+  Path: event:/VineCut
+  Guid:
+    Data1: 1763072513
+    Data2: 1209791978
+    Data3: 1379719065
+    Data4: -1879515419
+  Banks:
+  - {fileID: -2287576456447216130}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 7.2000003
+  Length: 1060
 --- !u!114 &-2408127989306901438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,7 +109,7 @@ MonoBehaviour:
   Path: ../Desktop/bc/test test/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638131279181164134
+  lastModified: 638143515231567504
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -102,10 +129,10 @@ MonoBehaviour:
   Path: ../Desktop/bc/test test/Build/Desktop/playerSounds.bank
   Name: playerSounds
   StudioPath: bank:/playerSounds
-  lastModified: 638131279181437738
+  lastModified: 638143515231922729
   FileSizes:
   - Name: Desktop
-    Value: 158560
+    Value: 284384
   Exists: 1
 --- !u!114 &-1835998164139439591
 MonoBehaviour:
@@ -157,12 +184,13 @@ MonoBehaviour:
   - {fileID: 4577134481859640207}
   - {fileID: 492640924863662670}
   - {fileID: -1835998164139439591}
+  - {fileID: -3181890195944718924}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2408127989306901438}
   StringsBanks:
   - {fileID: -4338367337034393598}
-  cacheTime: 638131279182188536
+  cacheTime: 638143515232512864
   cacheVersion: 131601
 --- !u!114 &492640924863662670
 MonoBehaviour:
@@ -216,7 +244,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 4.6
   Length: 0
 --- !u!114 &8179456379137913505
 MonoBehaviour:
@@ -233,7 +261,7 @@ MonoBehaviour:
   Path: ../Desktop/bc/test test/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638131279181997838
+  lastModified: 638143515232342819
   FileSizes:
   - Name: Desktop
     Value: 4363008

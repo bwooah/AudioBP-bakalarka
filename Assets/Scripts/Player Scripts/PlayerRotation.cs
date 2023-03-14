@@ -1,62 +1,50 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-
-public class PlayerRotation : MonoBehaviour
+namespace Player_Scripts
 {
-    private float compassSmooth = 5f;
-    private float m_lastMagneticHeading = 0f;
-    private float m_lastSlerp = 0f;
+    public class PlayerRotation : MonoBehaviour
+    {
+        [SerializeField] private float compassSmooth = 5f;
 
-    // private float updateInterval = 0.1f;
-    private float smoothTime = 0.5f;
-    private int rotationValidator = 0;
-    private int valideRotationAfter = 3;
-    private float elapsedTime = 0f;
-    void Start(){
-        // If you need an accurate heading to true north, 
-        // start the location service so Unity can correct for local deviations:
-        Input.location.Start();
-        // Start the compass.
-        Input.compass.enabled = true;
-        // while (true)
-        // {
-        //     yield return new WaitForSeconds(updateI);
-        //         
-        //     float rawHeading = Input.compass.trueHeading;
-        //     
-        //     // Apply the low-pass filter to smooth out the compass readings
-        //     m_lastMagneticHeading = (1 - smoothingFactor) * filteredHeading + compassSmooth * rawHeading;
-        //
-        //     // Rotate the object based on the filtered compass heading
-        //     transform.rotation = Quaternion.Euler(0f, -m_lastMagneticHeading, 0f);
-        // }
-    }
+        private float _lastHeading;
+        private int _rotationValidator;
+        private const int ValideRotationAfter = 3;
 
-    // Update is called once per frame
-    void Update(){
-        elapsedTime += Time.deltaTime;
-        //do rotation based on compass
-        float currentMagneticHeading = Input.compass.magneticHeading;
-        // Debug.Log(currentMagneticHeading + " curread");
-        if (m_lastMagneticHeading < (currentMagneticHeading - compassSmooth)%360 ||
-            m_lastMagneticHeading > (currentMagneticHeading + compassSmooth)%360)
-        {
-            rotationValidator++;
-            if (rotationValidator > valideRotationAfter)
-            {
-                rotationValidator = 0;
-                m_lastMagneticHeading = currentMagneticHeading;
-                m_lastSlerp = Mathf.Lerp(m_lastMagneticHeading, currentMagneticHeading, Mathf.Clamp01(elapsedTime / smoothTime));
-                // Debug.Log(m_lastMagneticHeading + '\n');
-                transform.localRotation = Quaternion.Euler(0, m_lastSlerp, 0);
-            }
+        // median filter 
+        private float[] _headingBuffer;
+        private int _bufferIndex;
+        public int medianFilterSize = 15;
+
+        private void Start(){
+            // Start the compass.
+            Input.compass.enabled = true;
+            
+            _headingBuffer = new float[medianFilterSize];
+            var initialHeading = Input.compass.magneticHeading;
+            for (var i = 0; i < medianFilterSize; i++)
+                _headingBuffer[i] = initialHeading;
         }
-        else
-        {
-            rotationValidator = 0;
+
+        private void Update(){
+            _headingBuffer[_bufferIndex] = Input.compass.magneticHeading;
+            _bufferIndex = (_bufferIndex + 1) % medianFilterSize;
+            
+            // Calculate the median of the heading buffer
+            var sortedBuffer = (float[])_headingBuffer.Clone();
+            System.Array.Sort(sortedBuffer);
+            var currentMagneticHeading = sortedBuffer[medianFilterSize / 2];
+            
+            //do rotation based on compass
+            if (_lastHeading < (currentMagneticHeading - compassSmooth)%360 ||
+                _lastHeading > (currentMagneticHeading + compassSmooth)%360) {
+                _rotationValidator++;
+                if (_rotationValidator <= ValideRotationAfter) return;
+                _rotationValidator = 0;
+                _lastHeading = currentMagneticHeading;
+                transform.localRotation = Quaternion.Euler(0, _lastHeading, 0);
+            }
+            else
+                _rotationValidator = 0;
         }
     }
 }

@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R58N14KAFZL",
         "name": "com.DefaultCompany.Myproject",
-        "processId": 18359,
+        "processId": 17906,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -58,80 +58,236 @@
         },
         {
             "deviceId": "R58N14KAFZL",
-            "name": "com.DefaultCompany.Myproject",
-            "processId": 31370,
-            "exited": true
-        },
-        {
-            "deviceId": "R58N14KAFZL",
-            "name": "com.DefaultCompany.Myproject",
-            "processId": 1944,
-            "exited": true
-        },
-        {
-            "deviceId": "R58N14KAFZL",
-            "name": "com.DefaultCompany.Myproject",
-            "processId": 4090,
-            "exited": true
-        },
-        {
-            "deviceId": "R58N14KAFZL",
-            "name": "com.DefaultCompany.Myproject",
-            "processId": 4924,
-            "exited": true
-        },
-        {
-            "deviceId": "R58N14KAFZL",
             "name": "com.sec.android.app.launcher",
-            "processId": 2583,
+            "processId": 29572,
             "exited": false
         },
         {
             "deviceId": "R58N14KAFZL",
             "name": "com.DefaultCompany.Myproject",
-            "processId": 5242,
+            "processId": 8018,
+            "exited": true
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 9758,
+            "exited": true
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 10635,
+            "exited": true
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 10941,
+            "exited": true
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 12980,
             "exited": false
         },
         {
             "deviceId": "R58N14KAFZL",
             "name": "com.DefaultCompany.Myproject",
-            "processId": 5699,
+            "processId": 15033,
             "exited": false
         },
         {
             "deviceId": "R58N14KAFZL",
             "name": "com.DefaultCompany.Myproject",
-            "processId": 7045,
+            "processId": 21511,
             "exited": false
         },
         {
             "deviceId": "R58N14KAFZL",
             "name": "com.DefaultCompany.Myproject",
-            "processId": 16095,
+            "processId": 21933,
             "exited": false
         },
         {
             "deviceId": "R58N14KAFZL",
             "name": "com.DefaultCompany.Myproject",
-            "processId": 17169,
+            "processId": 25753,
             "exited": false
         },
         {
             "deviceId": "R58N14KAFZL",
             "name": "com.DefaultCompany.Myproject",
-            "processId": 17705,
+            "processId": 26239,
             "exited": false
         },
         {
             "deviceId": "R58N14KAFZL",
             "name": "com.DefaultCompany.Myproject",
-            "processId": 18057,
+            "processId": 26506,
             "exited": false
         },
         {
             "deviceId": "R58N14KAFZL",
             "name": "com.DefaultCompany.Myproject",
-            "processId": 18359,
+            "processId": 26835,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 27116,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 27484,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 29098,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 29287,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 29759,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 32532,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 807,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 1669,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 3157,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 3658,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 4615,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 5182,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 5529,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 6339,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 6994,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 8187,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 9519,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 11074,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 11886,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 12429,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 12812,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 16921,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 17251,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 17535,
+            "exited": false
+        },
+        {
+            "deviceId": "R58N14KAFZL",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 17906,
+            "exited": false
+        },
+        {
+            "deviceId": "127.0.0.1:21503",
+            "name": "com.pixelfederation.ts2",
+            "processId": 3883,
             "exited": false
         }
     ],
